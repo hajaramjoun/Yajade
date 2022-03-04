@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gestionnaire des utilisateurs</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+			<link rel="stylesheet" href="/css/skel.css" />
+			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/style-wide.css" />
+	</head>
+
+    <body>
+	    <div class="container manageUsers">
+    		<a href="/" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home"></span></a>
+	    	<% if(userList != null) { %>
+		        <h1>Liste des membres</h1>
+		        <ul>
+			        <% 
+			        var user;
+			  		for (var i = 0, l = userList.length; i < l; i++) {
+			    	user = userList[i];
+			    	%>
+			    	 <li>
+			         	<a href="/manageUsers/delete/<%= user._id %>">✘</a>
+			             <%= user.username %>
+			         </li>
+			        <% } } %>
+		        </ul>
+		    
+		    <h1>Ajout d'un membre</h1>
+			<form action="/manageUsers" method="post">
+			    <div class="row half">
+					<div class="6u">
+				        <label for="login">Identifiants</label>
+				        <input type="text" name="username" id="username" autofocus />
+				    </div>
+					<div class="6u">
+				        <label for="password">Mot de passe</label>
+				        <input type="password" name="password" id="password" autofocus />
+				    </div>
+			    </div>
+			     <div class="row">
+					<div class="4u">   
+				        <input type="submit"  value="Ajouter"/>
+			    	</div>
+		    	</div>
+			</form>
+			
+			<% if(message != null && message != "") { %>
+				<p><%=message%></p>
+			<% } %>
+			
+		</div>	
+    </body>
+</html>

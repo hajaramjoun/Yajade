@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Yajade</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Yajade. Conseil, Expertise et Architecture au service des clients et intégrateurs Jalios. Le cabinet Yajade vous accompagne sur vos projets Jalios" />
+		<meta name="keywords" content="Yajade, JCMS, JALIOS, Conseil, Expertise, Architecture " />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+<% 
+article_1 = mapReferenceArticle.get("Article_1");
+article_2 = mapReferenceArticle.get("Article_2");
+article_3 = mapReferenceArticle.get("Article_3");
+article_4 = mapReferenceArticle.get("Article_4");
+article_5 = mapReferenceArticle.get("Article_5");
+%>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><a href="/"><img src="images/logoYajade.jpg" alt="" /></a></span>
+							<h1 id="title">
+							Yajade 
+							<% if (loggedMember) { %>
+							/ <%=loggedMember.username%>
+							<%}%>
+							</h1>
+							<p>Conseil et Architecture Jalios</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home"><%= (article_1 != null && article_1 != "")?article_1.title:"titre1" %></span></a></li>
+								<li><a href="#skills" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th"><%= (article_2 != null && article_2 != "")?article_2.title:"titre1" %></span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope"><%= (article_5 != null && article_5 != "")?article_5.title:"titre1" %></span></a></li>
+								<% if (loggedMember) { %>
+									<li><a href="http://src.yajade.com" class="skel-layers-ignoreHref"><span class="icon fa-git-square">Stash</span></a></li>
+									<li><a href="http://wiki.yajade.com" class="skel-layers-ignoreHref"><span class="icon fa-dashboard">Confluence</span></a></li>
+									<li><a href="http://issues.yajade.com" class="skel-layers-ignoreHref"><span class="icon fa-comments">Jira</span></a></li>
+									<li><a href="/manageUSers" class="skel-layers-ignoreHref"><span class="icon fa-cogs">Gestion des utilisateurs</span></a></li>
+									<li><a href="/historicMails" class="skel-layers-ignoreHref"><span class="icon fa-folder-open">Historique des mails</span></a></li>
+									<li><a href="/logout" class="skel-layers-ignoreHref"><span class="icon fa-sign-out">Déconnexion</span></a></li>
+								<%  } else { %>
+									<li><a href="#" class="skel-layers-ignoreHref"><span class="icon fa-sign-in" onclick="$('#formConnection').toggle();">Connexion</span></a></li>
+									<div id="formConnection">
+										<form action="/login" method="post">
+									        <input type="text" placeholder="Identifiant" name="username" />
+									        <input type="password" placeholder="Mot de passe" name="password" />
+									     	<div class="submit">
+									        	<input type="submit"  value="OK"/>
+									        </div>
+										</form>
+									</div>
+								<%  } %>
+							</ul>
+						</nav>
+						
+				</div>
+	
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">
+								<% if (loggedMember) { %>
+									<a href="/contentManagement/Article_1" role="button" class="editArticle"><img src="images/edit.gif" alt="" /></a>
+								<%  } %>
+								<%= (article_1 != null && article_1 != "")?article_1.description:"description" %>
+								</h2> 
+								<br />
+								<h1><%= (article_1 != null && article_1 != "")?article_1.content:"content" %></h1> <br />
+							</header>
+							
+							<% /* <footer>
+								<a href="https://www.jalios.com" class="button scrolly">JALIOS Website</a>
+							</footer>
+							*/ %>
+							
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+   		    	 
+					<section id="skills" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>
+									<%= (article_2 != null && article_2 != "")?article_2.title:"title" %>
+									<% if (loggedMember) { %>
+										<a href="/contentManagement/Article_2" role="button" class="editArticle"><img src="images/edit.gif" alt="" /></a>
+									<%}%>
+								</h2>
+							</header>
+							
+							<p> <%= (article_2 != null && article_2 != "")?article_2.description:"description" %></p>
+						
+							<div class="row">
+								<div class="4u">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/architecte.jpg" alt="Architecture" /></a>
+										<header>
+											<h3>Architecture</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/web.jpg" alt="WEB" /></a>
+										<header>
+											<h3>WEB</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="https://www.jalios.com" class="image fit"><img src="images/jalioscms.png" alt="JCMS" /></a>
+										<header>
+											<h3>Gestionnaire de contenu Jalios</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/CMS.jpg" alt="CMS" /></a>
+										<header>
+											<h3>Content Management System</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/conseils.jpg" alt="Conseils" /></a>
+										<header>
+											<h3>Consulting</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/developpeur.jpg" alt="Développement" /></a>
+										<header>
+											<h3>Développement</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+							
+							<p> <%= (article_2 != null && article_2 != "")?article_2.content:"content" %></p>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="five">
+						<div class="container">
+
+							<header>
+									<h2>
+									<%= (article_5 != null && article_5 != "")?article_5.title:"title" %>
+									<% if (loggedMember) { %>
+										<a href="/contentManagement/Article_5" role="button" class="editArticle"><img src="images/edit.gif" alt="" /></a>
+									<% } %>
+								</h2>
+							</header>
+
+							<p><%= (article_5 != null && article_5 != "")?article_5.description:"description" %></p>
+							<p><%= (article_5 != null && article_5 != "")?article_5.content:"content" %></p>
+							
+							<form method="post" action="/contactForm">
+								<div class="row half">
+									<div class="6u"><input type="text" name="name" placeholder="Nom" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group">
+									<div class="g-recaptcha" data-sitekey="6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ"></div>
+								</div>
+									<div class="12u">
+										<input type="submit" value="Envoyer" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>Yajade, SARL au capital de 10 000 €, inscrite au RCS de Versailles SIRET 524 661 766 00021 - APE 6201Z</li>
+					</ul>
+				
+			</div>
+
+	</body>
+</html>

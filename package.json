@@ -1,0 +1,17 @@
+{
+  "name": "YajadeCom",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "ejs": "*",
+    "express": "3.2.6",
+    "hashmap": "^2.3.0",
+    "mongoose": "^5.4.2",
+    "nodemailer": "^5.0.0",
+    "request": "^2.88.0"
+  }
+}

@@ -1,0 +1,157 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'n', null ]
+6 verbose cache add name=undefined spec="n" args=["n",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'n',
+7 verbose parsed url   path: 'n',
+7 verbose parsed url   href: 'n' }
+8 silly lockFile d1854cae-n n
+9 verbose lock n C:\Users\Nicolas BOUCHER\AppData\Roaming\npm-cache\d1854cae-n.lock
+10 silly lockFile d1854cae-n n
+11 silly lockFile d1854cae-n n
+12 verbose addNamed [ 'n', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 6b58d7dc-n n@
+15 verbose lock n@ C:\Users\Nicolas BOUCHER\AppData\Roaming\npm-cache\6b58d7dc-n.lock
+16 silly addNameRange { name: 'n', range: '*', hasData: false }
+17 verbose url raw n
+18 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
+19 verbose url resolved https://registry.npmjs.org/n
+20 info trying registry request attempt 1 at 15:35:32
+21 http GET https://registry.npmjs.org/n
+22 http 200 https://registry.npmjs.org/n
+23 silly registry.get cb [ 200,
+23 silly registry.get   { date: 'Tue, 18 Nov 2014 14:35:33 GMT',
+23 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     etag: '"5E3ZCIQU6SNYXLBKQ603Z7QCQ"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     'content-length': '36647',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '0',
+23 silly registry.get     'x-served-by': 'cache-fra1233-FRA',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1416321333.764773,VS0,VE108',
+23 silly registry.get     vary: 'Accept',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 silly addNameRange number 2 { name: 'n', range: '*', hasData: true }
+25 silly addNameRange versions [ 'n',
+25 silly addNameRange   [ '0.0.1',
+25 silly addNameRange     '0.0.2',
+25 silly addNameRange     '0.0.3',
+25 silly addNameRange     '0.0.4',
+25 silly addNameRange     '0.1.0',
+25 silly addNameRange     '0.1.1',
+25 silly addNameRange     '0.1.2',
+25 silly addNameRange     '0.2.0',
+25 silly addNameRange     '0.2.1',
+25 silly addNameRange     '0.2.2',
+25 silly addNameRange     '0.3.0',
+25 silly addNameRange     '0.4.0',
+25 silly addNameRange     '0.4.1',
+25 silly addNameRange     '0.4.2',
+25 silly addNameRange     '0.5.0',
+25 silly addNameRange     '0.5.1',
+25 silly addNameRange     '0.5.2',
+25 silly addNameRange     '0.5.3',
+25 silly addNameRange     '0.5.4',
+25 silly addNameRange     '0.6.0',
+25 silly addNameRange     '0.6.1',
+25 silly addNameRange     '0.7.0',
+25 silly addNameRange     '0.7.1',
+25 silly addNameRange     '0.7.2',
+25 silly addNameRange     '0.7.3',
+25 silly addNameRange     '0.8.0',
+25 silly addNameRange     '0.8.1',
+25 silly addNameRange     '0.8.2',
+25 silly addNameRange     '0.9.0',
+25 silly addNameRange     '0.9.1',
+25 silly addNameRange     '0.9.2',
+25 silly addNameRange     '0.9.3',
+25 silly addNameRange     '1.0.0',
+25 silly addNameRange     '1.1.0',
+25 silly addNameRange     '1.2.1',
+25 silly addNameRange     '1.2.2',
+25 silly addNameRange     '1.2.3',
+25 silly addNameRange     '1.2.4',
+25 silly addNameRange     '1.2.5',
+25 silly addNameRange     '1.2.6',
+25 silly addNameRange     '1.2.7',
+25 silly addNameRange     '1.2.8',
+25 silly addNameRange     '1.2.9' ] ]
+26 verbose addNamed [ 'n', '1.2.9' ]
+27 verbose addNamed [ '1.2.9', '1.2.9' ]
+28 silly lockFile 7f22195c-n-1-2-9 n@1.2.9
+29 verbose lock n@1.2.9 C:\Users\Nicolas BOUCHER\AppData\Roaming\npm-cache\7f22195c-n-1-2-9.lock
+30 silly lockFile 473decd1-registry-npmjs-org-n-n-1-2-9-tgz https://registry.npmjs.org/n/-/n-1.2.9.tgz
+31 verbose lock https://registry.npmjs.org/n/-/n-1.2.9.tgz C:\Users\Nicolas BOUCHER\AppData\Roaming\npm-cache\473decd1-registry-npmjs-org-n-n-1-2-9-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/n/-/n-1.2.9.tgz',
+32 verbose addRemoteTarball   '962f4a31f218e0e03d4353e68311d4bbe38cf130' ]
+33 info retry fetch attempt 1 at 15:35:33
+34 verbose fetch to= C:\Users\NICOLA~1\AppData\Local\Temp\npm-10584-K5aR_L4_\registry.npmjs.org\n\-\n-1.2.9.tgz
+35 http GET https://registry.npmjs.org/n/-/n-1.2.9.tgz
+36 http 200 https://registry.npmjs.org/n/-/n-1.2.9.tgz
+37 silly lockFile 473decd1-registry-npmjs-org-n-n-1-2-9-tgz https://registry.npmjs.org/n/-/n-1.2.9.tgz
+38 silly lockFile 473decd1-registry-npmjs-org-n-n-1-2-9-tgz https://registry.npmjs.org/n/-/n-1.2.9.tgz
+39 silly lockFile 7f22195c-n-1-2-9 n@1.2.9
+40 silly lockFile 7f22195c-n-1-2-9 n@1.2.9
+41 silly lockFile 6b58d7dc-n n@
+42 silly lockFile 6b58d7dc-n n@
+43 silly resolved [ { name: 'n',
+43 silly resolved     description: 'node version manager',
+43 silly resolved     version: '1.2.9',
+43 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+43 silly resolved     homepage: 'https://github.com/visionmedia/n',
+43 silly resolved     bugs: { url: 'https://github.com/visionmedia/n/issues' },
+43 silly resolved     keywords: [ 'node', 'binary', 'version', 'manager', 'switcher', 'env' ],
+43 silly resolved     bin: { n: './bin/n' },
+43 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/n.git' },
+43 silly resolved     preferGlobal: true,
+43 silly resolved     os: [ '!win32' ],
+43 silly resolved     engines: { node: '*' },
+43 silly resolved     license: 'MIT',
+43 silly resolved     _id: 'n@1.2.9',
+43 silly resolved     _shasum: '962f4a31f218e0e03d4353e68311d4bbe38cf130',
+43 silly resolved     _from: 'n@',
+43 silly resolved     _npmVersion: '1.4.9',
+43 silly resolved     _npmUser: { name: 'tjwebb', email: 'me@traviswebb.com' },
+43 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+43 silly resolved     dist:
+43 silly resolved      { shasum: '962f4a31f218e0e03d4353e68311d4bbe38cf130',
+43 silly resolved        tarball: 'http://registry.npmjs.org/n/-/n-1.2.9.tgz' },
+43 silly resolved     directories: {},
+43 silly resolved     _resolved: 'https://registry.npmjs.org/n/-/n-1.2.9.tgz' } ]
+44 info install n@1.2.9 into C:\Users\Nicolas BOUCHER\AppData\Roaming\npm
+45 info installOne n@1.2.9
+46 error notsup Unsupported
+46 error notsup Not compatible with your operating system or architecture: n@1.2.9
+46 error notsup Valid OS:    !win32
+46 error notsup Valid Arch:  any
+46 error notsup Actual OS:   win32
+46 error notsup Actual Arch: x64
+47 error System Windows_NT 6.1.7601
+48 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n"
+49 error cwd E:\Workspaces\Yajade.com\node.js\workspace\YajadeCom
+50 error node -v v0.10.29
+51 error npm -v 1.4.14
+52 error code EBADPLATFORM
+53 verbose exit [ 1, true ]

@@ -1,0 +1,47 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.header{
+	margin-bottom:20px;
+}
+.navPrincipale{
+	margin-top:60px;
+}
+.navbar-inverse, .navbar-inverse .navbar-nav > .active > a{
+	background-image:linear-gradient(to bottom, #00afef 0px, #6A5F93 100%) !important;
+}
+.navbar-nav li a{
+	color:black !important;
+}
+.navbar-nav li a:hover, .navbar-inverse .navbar-nav > .active > a{
+	color:white !important;
+	box-shadow:none !important;
+}
+.footer p{
+	color: #6A5F93;
+	margin-top:30px;
+}
+.mainColumn .row {
+	margin-bottom:20px;
+}
+.mainColumn .col-md-6 .row, .services .row, .whyJCMS .row, .ressources .row, .about .row{
+	margin:0px;
+}
+.mainColumn .col-md-6 .row, .services .row, .whyJCMS .row, .ressources .row, .about .row, .contact .row .col-md-8{
+	background-color: white; 
+	padding: 10px; 
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+body {
+    background: -moz-linear-gradient(center top , white, #aac6ff) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin: auto;
+}
